@@ -7,7 +7,7 @@ lightBlue = (112, 150, 158)
 yellow = (252, 227, 166)
 
 # Import image.
-my_image = Image.open("moto.jpg") #change IMAGENAME to the path on your computer to the image you're using
+my_image = Image.open("face.jpg") #change IMAGENAME to the path on your computer to the image you're using
 image_list = my_image.getdata() #each pixel is represented in the form (red value, green value, blue value, transparency). You don't need the fourth value.
 image_list = list(image_list) #Turns the sequence above into a list. The list can be iterated through in a loop.
 
@@ -16,20 +16,18 @@ recolored = [] #list that will hold the pixel data for the new image.
 #YOUR CODE to loop through the original list of pixels and build a new list based on intensity should go here.
 for pixel in image_list:
     pixel_intensity = pixel[0] + pixel[1] + pixel[2]
-    if pixel_intensity < 182:
+    if pixel_intensity <= 182:
         pixel = darkBlue
         recolored.append(pixel)
-    if pixel_intensity >=182 and intensity<=364:
+    elif pixel_intensity>=182 and pixel_intensity<=364:
         pixel = red
         recolored.append(pixel)
-    if pixel_intensity >=364 and intensity <=546:
+    elif pixel_intensity >= 364 and pixel_intensity<= 546:
         pixel = lightBlue
         recolored.append(pixel)
-        if pixel_intensity <=546:
+    else:
         pixel = yellow
         recolored.append(pixel)
-
-
 
 
 # Create a new image using the recolored list. Display and save the image.

@@ -40,7 +40,25 @@ h2 {
 p {
     text-align: center;
 }
- 
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
 </style>
 </head>
 <body>
@@ -51,6 +69,11 @@ p {
 	
 <h1>Things about me...</h1>
 <p class="excerpt"> I love living life some of my hobbies include reading, hiking, fashion, and engineer. Falling in love this school year with sociology and anthropology gave me insight that I received. I feel empowered when I accomplish task that I set out for myself. This summer my luck is evident with my ability to participate in FIMD 3 days of fashion and Girls who Code. Being able to access my interest resonates with me because it backs up the understanding that I am able. I am in control of my choices and I can choose to live in this world as a leader and innovator.</span></p>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+>
 
 </body>
 </html>
